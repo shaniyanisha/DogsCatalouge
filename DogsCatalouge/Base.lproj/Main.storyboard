@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jxp-8o-aMW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DOGS CATALOUGE-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomePageVCID" id="BYZ-38-t0r" customClass="HomePageVC" customModule="DogsCatalouge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-vt-wEV">
+                                <rect key="frame" x="-0.5" y="64" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="MIR-Db-tKr"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" placeholder="Search Image" translatesAutoresizingMaskIntoConstraints="NO" id="H1X-Kn-qoK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="y0z-UK-lxI"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0el-vE-OdD">
+                                <rect key="frame" x="-0.5" y="134" width="375" height="533"/>
+                                <color key="backgroundColor" red="0.67963701486587524" green="0.6362074613571167" blue="0.92464786767959595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m1J-e6-erw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mcw-vt-wEV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EvY-Ym-E0l"/>
+                            <constraint firstItem="H1X-Kn-qoK" firstAttribute="top" secondItem="mcw-vt-wEV" secondAttribute="top" id="LWR-Wh-4pP"/>
+                            <constraint firstItem="mcw-vt-wEV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RbG-mj-rOU"/>
+                            <constraint firstItem="0el-vE-OdD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Rbu-OW-zko"/>
+                            <constraint firstItem="mcw-vt-wEV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VQq-fx-2lS"/>
+                            <constraint firstItem="0el-vE-OdD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WQ9-bf-iP8"/>
+                            <constraint firstItem="H1X-Kn-qoK" firstAttribute="centerX" secondItem="mcw-vt-wEV" secondAttribute="centerX" id="aHd-7l-j0z"/>
+                            <constraint firstItem="H1X-Kn-qoK" firstAttribute="width" secondItem="mcw-vt-wEV" secondAttribute="width" id="lwJ-3v-mLF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0el-vE-OdD" secondAttribute="bottom" id="teC-0z-OT7"/>
+                            <constraint firstItem="0el-vE-OdD" firstAttribute="top" secondItem="mcw-vt-wEV" secondAttribute="bottom" id="vPO-rl-G1F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DOGS CATALOUGE" id="SjS-N2-Rer"/>
+                    <connections>
+                        <outlet property="dogsImageCollectionView" destination="0el-vE-OdD" id="QCF-Uj-UHt"/>
+                        <outlet property="searchBar" destination="H1X-Kn-qoK" id="YDF-EY-fkw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1972" y="777.66116941529242"/>
+        </scene>
+        <!--Image Preview-->
+        <scene sceneID="gKb-JK-o5U">
+            <objects>
+                <viewController storyboardIdentifier="ImagePreview" id="oKM-eS-VD6" customClass="ImagePreview" customModule="DogsCatalouge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7vi-Ny-dDL"/>
+                        <viewControllerLayoutGuide type="bottom" id="GYc-nr-ACZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jBi-kY-sVI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzO-rC-JYr">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tzO-rC-JYr" firstAttribute="height" secondItem="jBi-kY-sVI" secondAttribute="height" id="91m-bF-DLk"/>
+                            <constraint firstItem="tzO-rC-JYr" firstAttribute="width" secondItem="jBi-kY-sVI" secondAttribute="width" id="NfU-Am-DRq"/>
+                            <constraint firstItem="tzO-rC-JYr" firstAttribute="top" secondItem="7vi-Ny-dDL" secondAttribute="bottom" constant="-20" id="Zjz-F9-iLg"/>
+                            <constraint firstItem="tzO-rC-JYr" firstAttribute="centerX" secondItem="jBi-kY-sVI" secondAttribute="centerX" id="s4l-WU-YJm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentImage" destination="tzO-rC-JYr" id="vHE-Cn-jy6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyD-vQ-ox5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="778"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NlX-ZE-z1z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jxp-8o-aMW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ow-Ht-7ml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ADC-kk-RLg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ix3-Ft-uNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="777.66116941529242"/>
+        </scene>
+    </scenes>
+</document>
